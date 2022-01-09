@@ -1,14 +1,17 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Build.Reporting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class FillingTileArrey : MonoBehaviour
 {
    public List<Transform> waypoints;
-   public NavMeshSurface2d NavMash;
+//   public GameObject Map;
+   
    //угол поворота тайла.
    private int[] rot = new int[4]{
        0,90,180,-90
@@ -59,10 +62,15 @@ public class FillingTileArrey : MonoBehaviour
     
     public void NavMeshRebaker()
     {
-        NavMash.BuildNavMesh();
+//        NavMash.BuildNavMeshAsync();
+AstarPath.active.Scan();
     }
     public void NavMeshClear()
     {
-        NavMash.RemoveData();
+//        NavMash.RemoveData();
     }
+}
+
+public class Pathfinder
+{
 }
