@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class RotationTile : MonoBehaviour
 {
-    private Transform _transform;
+    private Transform _transChild;
     void Start()
     {
-        _transform = GetComponent<Transform>();
+        _transChild = this.gameObject.transform.GetChild(0);
     }
 
     public void RotationTiles()
     {
-//        var tr = _transform.rotation;
-        _transform.rotation *= Quaternion.Euler(0,0,90F);;
+        _transChild.rotation *= Quaternion.Euler(0,0,90F);;
     }
 }

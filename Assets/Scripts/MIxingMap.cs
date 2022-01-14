@@ -1,30 +1,26 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Build.Reporting;
 using UnityEngine;
-using Random = UnityEngine.Random;
-using UnityEngine.AI;
-using UnityEngine.SceneManagement;
 
-public class FillingTileArrey : MonoBehaviour
+public class MIxingMap : MonoBehaviour
 {
-   public List<Transform> waypoints;
-//   public GameObject Map;
+    public List<Transform> waypoints;
+
    
-   //угол поворота тайла.
-   private int[] rot = new int[4]{
-       0,90,180,-90
-   };
+    //угол поворота тайла.
+    private int[] rot = new int[4]{
+        0,90,180,-90
+    };
+    
     private void Awake()
     {
         UpdateWaypoints();
     }
 
     private void Start()
-    {
- //       ReshufflingArray();
-//        NavMeshRebaker();
+    { 
+        ReshufflingArray();
+//        AngleArray();
     }
 
     [ContextMenu("Update Waypoint List")]
@@ -63,14 +59,10 @@ public class FillingTileArrey : MonoBehaviour
     public void NavMeshRebaker()
     {
 //        NavMash.BuildNavMeshAsync();
-//AstarPath.active.Scan();
+//        AstarPath.active.Scan();
     }
     public void NavMeshClear()
     {
 //        NavMash.RemoveData();
     }
-}
-
-public class Pathfinder
-{
 }
