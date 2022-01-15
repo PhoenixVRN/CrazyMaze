@@ -35,18 +35,37 @@ public class TileBias : MonoBehaviour
     public void MoveTile()
     {
         DirectionMove();
+        if (_directMove == "Error") return;
         ListMove();
     }
 
     private void DirectionMove()
     {
-        if (transform.position.x == -1 && transform.position.y <= 5 && transform.position.y >= 0) _directMove = "Right";
+        if (transform.position.x == -1 && transform.position.y <= 5 && transform.position.y >= 0)
+        {
+            _directMove = "Right";
+            return;
+        }
 
-        if (transform.position.x == 6 && transform.position.y <= 5 && transform.position.y >= 0) _directMove = "Left";
+        if (transform.position.x == 6 && transform.position.y <= 5 && transform.position.y >= 0)
+        {
+            _directMove = "Left";
+            return;
+        }
 
-        if (transform.position.y == -1 && transform.position.x <= 5 && transform.position.x >= 0) _directMove = "Up";
+        if (transform.position.y == -1 && transform.position.x <= 5 && transform.position.x >= 0)
+        {
+            _directMove = "Up";
+            return;
+        }
 
-        if (transform.position.y == 6 && transform.position.x <= 5 && transform.position.x >= 0) _directMove = "Down";
+        if (transform.position.y == 6 && transform.position.x <= 5 && transform.position.x >= 0)
+        {
+            _directMove = "Down";
+            return;
+        }
+        
+        _directMove = "Error";
     }
 
     private void ListMove()

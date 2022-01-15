@@ -60,6 +60,7 @@ public class PlayerControl : MonoBehaviour
           
       }
       
+      
       public void MovePlayerDown()
       {
           RaycastHit2D hit = Physics2D.Raycast((Vector2)transform.position + Vector2.down * 0.4f, Vector2.down, 0.5f);
