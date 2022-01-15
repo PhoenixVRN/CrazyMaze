@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,11 @@ public class RotationTile : MonoBehaviour
     void Start()
     {
         _transChild = this.gameObject.transform.GetChild(0);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown("e")) RotationTiles();
     }
 
     public void RotationTiles()

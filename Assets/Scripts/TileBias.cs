@@ -26,6 +26,12 @@ public class TileBias : MonoBehaviour
         _tf = tileForMove;
         _map.waypoints.Add(_tf.transform);
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown("space")) MoveTile();
+    }
+
     public void MoveTile()
     {
         DirectionMove();

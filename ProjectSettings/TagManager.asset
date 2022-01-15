@@ -8,6 +8,9 @@ TagManager:
   - Left
   - Up
   - Down
+  - Key
+  - Play
+  - Wall
   layers:
   - Default
   - TransparentFX
