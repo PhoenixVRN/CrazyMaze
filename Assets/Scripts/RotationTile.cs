@@ -12,6 +12,7 @@ public class RotationTile : MonoBehaviour
 
     public void RotationTiles()
     {
+        _transChild = this.gameObject.transform.GetChild(0);
         _transChild.rotation *= Quaternion.Euler(0,0,90F);;
     }
 }
