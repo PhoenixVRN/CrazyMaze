@@ -11,6 +11,7 @@ TagManager:
   - Key
   - Play
   - Wall
+  - Exit
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - UI
   - 
   - Map
-  - 
+  - Obgect
   - 
   - 
   - 

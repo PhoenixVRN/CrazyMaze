@@ -7,12 +7,15 @@ using UnityEngine;
 
 public class TileBias : MonoBehaviour
 {
+    public List<GameObject> findToShift;
     private GameObject _tMap;
     public MIxingMap _map;
     public GameObject tileForMove;
     public Rigidbody2D Player;
     private GameObject _tf;
     private Vector2 StartTile;
+    public List<GameObject> shiftOff;
+    
 
     private String _directMove;
     private String koortinat;
@@ -20,7 +23,7 @@ public class TileBias : MonoBehaviour
 
     private void Start()
     {
-        StartTile = this.transform.position;
+        StartTile = transform.position;
         _tMap = GameObject.Find("Tile_Map");
         _map = _tMap.GetComponent<MIxingMap>();
         _tf = tileForMove;
@@ -35,31 +38,35 @@ public class TileBias : MonoBehaviour
     public void MoveTile()
     {
         DirectionMove();
-        if (_directMove == "Error") return;
+        if (_directMove == "Error")
+        {
+            transform.position = StartTile;
+            return;
+        }
         ListMove();
     }
 
     private void DirectionMove()
     {
-        if (transform.position.x == -1 && transform.position.y <= 5 && transform.position.y >= 0)
+        if (transform.position.x == -1 && transform.position.y <= 6 && transform.position.y >= 0)
         {
             _directMove = "Right";
             return;
         }
 
-        if (transform.position.x == 6 && transform.position.y <= 5 && transform.position.y >= 0)
+        if (transform.position.x == 7 && transform.position.y <= 6 && transform.position.y >= 0)
         {
             _directMove = "Left";
             return;
         }
 
-        if (transform.position.y == -1 && transform.position.x <= 5 && transform.position.x >= 0)
+        if (transform.position.y == -1 && transform.position.x <= 6 && transform.position.x >= 0)
         {
             _directMove = "Up";
             return;
         }
 
-        if (transform.position.y == 6 && transform.position.x <= 5 && transform.position.x >= 0)
+        if (transform.position.y == 7 && transform.position.x <= 6 && transform.position.x >= 0)
         {
             _directMove = "Down";
             return;
@@ -75,13 +82,13 @@ public class TileBias : MonoBehaviour
         var y = tileForMove.transform.position.y;
         if (_directMove == "Right")
         {
-            WorkingAnArray(6, y, 1, false);
+            WorkingAnArray(7, y, 1, false);
             
             Vector2 positionP = Player.position;
             {
                 if (positionP.y == y)
                 {
-                    if (positionP.x < 5) positionP.x += 1;
+                    if (positionP.x < 6) positionP.x += 1;
 
                     else positionP.x = 0;
 
@@ -100,20 +107,20 @@ public class TileBias : MonoBehaviour
                 if (positionP.y == y)
                 {
                     if (positionP.x > 0) positionP.x -= 1;
-                    else positionP.x = 5;
+                    else positionP.x = 6;
                     Player.MovePosition(positionP);
                 }
             }
         }
         if (_directMove == "Up")
         {
-            WorkingAnArray(6, x , 1, true);
+            WorkingAnArray(7, x , 1, true);
 
             Vector2 positionP = Player.position;
             {
                 if (positionP.x == x)
                 {
-                    if (positionP.y < 5) positionP.y += 1;
+                    if (positionP.y < 6) positionP.y += 1;
                     else positionP.y = 0;
                     Player.MovePosition(positionP);
                 }
@@ -130,7 +137,7 @@ public class TileBias : MonoBehaviour
                 if (positionP.x == x)
                 {
                     if (positionP.y > 0) positionP.y -= 1;
-                    else positionP.y = 5;
+                    else positionP.y = 6;
                     Player.MovePosition(positionP);
                 }
             }
@@ -191,6 +198,7 @@ public class TileBias : MonoBehaviour
            
 
         }
+        HideFind();
         
         _tf.transform.SetParent(_tMap.transform); // убираем из родителя
         tileForMove = _listMove[a].gameObject;
@@ -200,5 +208,70 @@ public class TileBias : MonoBehaviour
         _listMove.Clear();
         _tf = tileForMove; 
     }
+
+    private void HideFind()
+    {
+       
+            if (transform.position.y == 1)
+            {
+                shiftOff[0].SetActive(true);
+                shiftOff[1].SetActive(true);
+                shiftOff[0] = findToShift[0];
+                shiftOff[1] = findToShift[1];
+                shiftOff[0].SetActive(false);
+                shiftOff[1].SetActive(false);
+            }
+
+            if (transform.position.y == 3)
+            {
+                shiftOff[0].SetActive(true);
+                shiftOff[1].SetActive(true);
+                shiftOff[0] = findToShift[2];
+                shiftOff[1] = findToShift[3];
+                shiftOff[0].SetActive(false);
+                shiftOff[1].SetActive(false);
+            }
+            
+            if (transform.position.y == 5)
+            {
+                shiftOff[0].SetActive(true);
+                shiftOff[1].SetActive(true);
+                shiftOff[0] = findToShift[4];
+                shiftOff[1] = findToShift[5];
+                shiftOff[0].SetActive(false);
+                shiftOff[1].SetActive(false);
+            }
+            
+            if (transform.position.x == 1)
+            {
+                shiftOff[0].SetActive(true);
+                shiftOff[1].SetActive(true);
+                shiftOff[0] = findToShift[6];
+                shiftOff[1] = findToShift[7];
+                shiftOff[0].SetActive(false);
+                shiftOff[1].SetActive(false);
+            }
+        
+            if (transform.position.x == 3)
+            {
+                shiftOff[0].SetActive(true);
+                shiftOff[1].SetActive(true);
+                shiftOff[0] = findToShift[8];
+                shiftOff[1] = findToShift[9];
+                shiftOff[0].SetActive(false);
+                shiftOff[1].SetActive(false);
+            }
+
+            if (transform.position.x == 5)
+            {
+                shiftOff[0].SetActive(true);
+                shiftOff[1].SetActive(true);
+                shiftOff[0] = findToShift[10];
+                shiftOff[1] = findToShift[11];
+                shiftOff[0].SetActive(false);
+                shiftOff[1].SetActive(false);
+            }
+
     }
+}
     
