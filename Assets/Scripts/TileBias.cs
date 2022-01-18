@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class TileBias : MonoBehaviour
@@ -15,6 +16,8 @@ public class TileBias : MonoBehaviour
     private GameObject _tf;
     private Vector2 StartTile;
     public List<GameObject> shiftOff;
+    public int score = 0;
+    public Text ScoText;
     
 
     private String _directMove;
@@ -206,7 +209,9 @@ public class TileBias : MonoBehaviour
         tileForMove.transform.SetParent(this.gameObject.transform,false);
         transform.position = StartTile;
         _listMove.Clear();
-        _tf = tileForMove; 
+        _tf = tileForMove;
+        score++;
+        ScoText.text = "Ходы: " + score.ToString();
     }
 
     private void HideFind()

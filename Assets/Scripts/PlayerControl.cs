@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class PlayerControl : MonoBehaviour
 {
     private Rigidbody2D _rigidbodyPlayer;
+    private bool key;
+    public Sprite imageSpr;
   
       void Start()
       {
