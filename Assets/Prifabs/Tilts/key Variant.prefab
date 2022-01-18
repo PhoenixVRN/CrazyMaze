@@ -69,7 +69,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2222381728337060308, guid: 97d69ffbc7244174dbe2e14342b94ac5, type: 3}
       propertyPath: m_Name
-      value: key
+      value: key Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2222381728337060308, guid: 97d69ffbc7244174dbe2e14342b94ac5, type: 3}
       propertyPath: m_TagString
@@ -98,16 +98,3 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.0076680575}
   serializedVersion: 2
   m_Radius: 1
---- !u!114 &658937105976647839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2597497665544772479}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62d47a98641b4294f9cc684cad7e2f7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  miText: {fileID: 0}

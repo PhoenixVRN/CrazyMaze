@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class Exit : MonoBehaviour
 {
-   public Text miText;
+//   public Text miText;
    private void OnTriggerEnter2D(Collider2D other)
    {
      
