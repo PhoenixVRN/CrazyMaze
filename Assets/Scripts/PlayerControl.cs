@@ -6,8 +6,11 @@ using UnityEngine.UI;
 
 public class PlayerControl : MonoBehaviour
 {
+    private float offSet = 0.3f;
+    private float distanc = 0.6f;
     private Rigidbody2D _rigidbodyPlayer;
     private bool key;
+    
 //    public Sprite imageSpr;
   
       void Start()
@@ -28,7 +31,7 @@ public class PlayerControl : MonoBehaviour
 
       public void MovePlayerRight()
       {
-          RaycastHit2D hit = Physics2D.Raycast((Vector2)transform.position + Vector2.right * 0.4f, Vector2.right, 0.5f);
+          RaycastHit2D hit = Physics2D.Raycast((Vector2)transform.position + Vector2.right * offSet, Vector2.right, distanc);
          
           if (hit.collider != null && hit.collider.gameObject.CompareTag("Wall")) return;
           
@@ -42,7 +45,7 @@ public class PlayerControl : MonoBehaviour
       
       public void MovePlayerLeft()
       {
-          RaycastHit2D hit = Physics2D.Raycast((Vector2)transform.position + Vector2.left * 0.4f, Vector2.left, 0.5f);
+          RaycastHit2D hit = Physics2D.Raycast((Vector2)transform.position + Vector2.left * offSet, Vector2.left, distanc);
           if (hit.collider != null && hit.collider.gameObject.CompareTag("Wall")) return;
           
           Vector2 position = _rigidbodyPlayer.position;
@@ -53,7 +56,7 @@ public class PlayerControl : MonoBehaviour
       
       public void MovePlayerUp()
       {
-          RaycastHit2D hit = Physics2D.Raycast((Vector2)transform.position + Vector2.up * 0.4f, Vector2.up, 0.5f);
+          RaycastHit2D hit = Physics2D.Raycast((Vector2)transform.position + Vector2.up * offSet, Vector2.up, distanc);
           if (hit.collider != null && hit.collider.gameObject.CompareTag("Wall")) return;
           
           Vector2 position = _rigidbodyPlayer.position;
@@ -65,7 +68,7 @@ public class PlayerControl : MonoBehaviour
       
       public void MovePlayerDown()
       {
-          RaycastHit2D hit = Physics2D.Raycast((Vector2)transform.position + Vector2.down * 0.4f, Vector2.down, 0.5f);
+          RaycastHit2D hit = Physics2D.Raycast((Vector2)transform.position + Vector2.down * offSet, Vector2.down, distanc);
           if (hit.collider != null && hit.collider.gameObject.CompareTag("Wall")) return;
           
           Vector2 position = _rigidbodyPlayer.position;

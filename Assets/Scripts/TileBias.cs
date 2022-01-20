@@ -183,22 +183,22 @@ public class TileBias : MonoBehaviour
                 }
             }
         }
-        
-        foreach (var s in _listMove)
-        {
-            if (vertical)
+        for (float d = 0.25f; d != 1; d = d + 0.25f){
+            foreach (var s in _listMove)
             {
-                Vector2 position = s.position;
-                position.y += c;
-                s.position = position; 
+                if (vertical)
+                {
+                    Vector2 position = s.position;
+                    position.y += c;
+                    s.position = position;
+                }
+                else
+                {
+                    Vector2 position = s.position;
+                    position.x += c;
+                    s.position = position;
+                }
             }
-            else
-            {
-                Vector2 position = s.position;
-                position.x += c;
-                s.position = position; 
-            }
-           
 
         }
         HideFind();
