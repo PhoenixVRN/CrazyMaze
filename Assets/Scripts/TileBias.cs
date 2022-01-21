@@ -18,8 +18,9 @@ public class TileBias : MonoBehaviour
     public List<GameObject> shiftOff;
     public int score = 0;
     public Text ScoText;
-    
 
+
+//    private bool vertical;
     private String _directMove;
     private String koortinat;
     public List<Transform> _listMove;
@@ -38,6 +39,7 @@ public class TileBias : MonoBehaviour
         if (Input.GetKeyDown("space")) MoveTile();
     }
 
+
     public void MoveTile()
     {
         DirectionMove();
@@ -46,6 +48,7 @@ public class TileBias : MonoBehaviour
             transform.position = StartTile;
             return;
         }
+
         ListMove();
     }
 
@@ -74,19 +77,18 @@ public class TileBias : MonoBehaviour
             _directMove = "Down";
             return;
         }
-        
+
         _directMove = "Error";
     }
 
     private void ListMove()
     {
-        
         var x = tileForMove.transform.position.x;
         var y = tileForMove.transform.position.y;
         if (_directMove == "Right")
         {
             WorkingAnArray(7, y, 1, false);
-            
+
             Vector2 positionP = Player.position;
             {
                 if (positionP.y == y)
@@ -99,10 +101,11 @@ public class TileBias : MonoBehaviour
                 }
             }
         }
-        
+
         if (_directMove == "Left")
         {
-            WorkingAnArray(0, y , -1, false);
+         
+            WorkingAnArray(0, y, -1, false);
 
 
             Vector2 positionP = Player.position;
@@ -115,9 +118,11 @@ public class TileBias : MonoBehaviour
                 }
             }
         }
+
         if (_directMove == "Up")
         {
-            WorkingAnArray(7, x , 1, true);
+        
+            WorkingAnArray(7, x, 1, true);
 
             Vector2 positionP = Player.position;
             {
@@ -128,11 +133,12 @@ public class TileBias : MonoBehaviour
                     Player.MovePosition(positionP);
                 }
             }
-        } 
-        
+        }
+
         if (_directMove == "Down")
         {
-            WorkingAnArray(0, x , -1, true);
+         
+            WorkingAnArray(0, x, -1, true);
 
 
             Vector2 positionP = Player.position;
@@ -154,7 +160,8 @@ public class TileBias : MonoBehaviour
             foreach (var i in _map.waypoints)
             {
                 if (i.position.x == b) _listMove.Add(i);
-            } 
+            }
+
             for (int i = 0; i < _listMove.Count; i++)
             {
                 for (int j = 0; j < _listMove.Count - 1; j++)
@@ -171,7 +178,8 @@ public class TileBias : MonoBehaviour
             foreach (var i in _map.waypoints)
             {
                 if (i.position.y == b) _listMove.Add(i);
-            } 
+            }
+
             for (int i = 0; i < _listMove.Count; i++)
             {
                 for (int j = 0; j < _listMove.Count - 1; j++)
@@ -183,30 +191,40 @@ public class TileBias : MonoBehaviour
                 }
             }
         }
-        for (float d = 0.25f; d != 1; d = d + 0.25f){
+
+        StartCoroutine(SmoothShift(c, vertical,a));
+
+        HideFind();
+       
+    }
+
+    private IEnumerator SmoothShift(int c, bool vertical, int a)
+    {
+        for (float d = 0; d < 10; d++)
+        {
             foreach (var s in _listMove)
             {
                 if (vertical)
                 {
                     Vector2 position = s.position;
-                    position.y += c;
+                    position.y += c * 0.1f; 
                     s.position = position;
                 }
                 else
                 {
                     Vector2 position = s.position;
-                    position.x += c;
+                    position.x += c * 0.1f;
                     s.position = position;
                 }
             }
 
+            yield return new WaitForSeconds(0.1f);
         }
-        HideFind();
         
         _tf.transform.SetParent(_tMap.transform); // убираем из родителя
         tileForMove = _listMove[a].gameObject;
         tileForMove.transform.position = Vector3.zero;
-        tileForMove.transform.SetParent(this.gameObject.transform,false);
+        tileForMove.transform.SetParent(this.gameObject.transform, false);
         transform.position = StartTile;
         _listMove.Clear();
         _tf = tileForMove;
@@ -214,69 +232,68 @@ public class TileBias : MonoBehaviour
         ScoText.text = "Ходы: " + score.ToString();
     }
 
+   
+
     private void HideFind()
     {
-       
-            if (transform.position.y == 1)
-            {
-                shiftOff[0].SetActive(true);
-                shiftOff[1].SetActive(true);
-                shiftOff[0] = findToShift[0];
-                shiftOff[1] = findToShift[1];
-                shiftOff[0].SetActive(false);
-                shiftOff[1].SetActive(false);
-            }
+        if (transform.position.y == 1)
+        {
+            shiftOff[0].SetActive(true);
+            shiftOff[1].SetActive(true);
+            shiftOff[0] = findToShift[0];
+            shiftOff[1] = findToShift[1];
+            shiftOff[0].SetActive(false);
+            shiftOff[1].SetActive(false);
+        }
 
-            if (transform.position.y == 3)
-            {
-                shiftOff[0].SetActive(true);
-                shiftOff[1].SetActive(true);
-                shiftOff[0] = findToShift[2];
-                shiftOff[1] = findToShift[3];
-                shiftOff[0].SetActive(false);
-                shiftOff[1].SetActive(false);
-            }
-            
-            if (transform.position.y == 5)
-            {
-                shiftOff[0].SetActive(true);
-                shiftOff[1].SetActive(true);
-                shiftOff[0] = findToShift[4];
-                shiftOff[1] = findToShift[5];
-                shiftOff[0].SetActive(false);
-                shiftOff[1].SetActive(false);
-            }
-            
-            if (transform.position.x == 1)
-            {
-                shiftOff[0].SetActive(true);
-                shiftOff[1].SetActive(true);
-                shiftOff[0] = findToShift[6];
-                shiftOff[1] = findToShift[7];
-                shiftOff[0].SetActive(false);
-                shiftOff[1].SetActive(false);
-            }
-        
-            if (transform.position.x == 3)
-            {
-                shiftOff[0].SetActive(true);
-                shiftOff[1].SetActive(true);
-                shiftOff[0] = findToShift[8];
-                shiftOff[1] = findToShift[9];
-                shiftOff[0].SetActive(false);
-                shiftOff[1].SetActive(false);
-            }
+        if (transform.position.y == 3)
+        {
+            shiftOff[0].SetActive(true);
+            shiftOff[1].SetActive(true);
+            shiftOff[0] = findToShift[2];
+            shiftOff[1] = findToShift[3];
+            shiftOff[0].SetActive(false);
+            shiftOff[1].SetActive(false);
+        }
 
-            if (transform.position.x == 5)
-            {
-                shiftOff[0].SetActive(true);
-                shiftOff[1].SetActive(true);
-                shiftOff[0] = findToShift[10];
-                shiftOff[1] = findToShift[11];
-                shiftOff[0].SetActive(false);
-                shiftOff[1].SetActive(false);
-            }
+        if (transform.position.y == 5)
+        {
+            shiftOff[0].SetActive(true);
+            shiftOff[1].SetActive(true);
+            shiftOff[0] = findToShift[4];
+            shiftOff[1] = findToShift[5];
+            shiftOff[0].SetActive(false);
+            shiftOff[1].SetActive(false);
+        }
 
+        if (transform.position.x == 1)
+        {
+            shiftOff[0].SetActive(true);
+            shiftOff[1].SetActive(true);
+            shiftOff[0] = findToShift[6];
+            shiftOff[1] = findToShift[7];
+            shiftOff[0].SetActive(false);
+            shiftOff[1].SetActive(false);
+        }
+
+        if (transform.position.x == 3)
+        {
+            shiftOff[0].SetActive(true);
+            shiftOff[1].SetActive(true);
+            shiftOff[0] = findToShift[8];
+            shiftOff[1] = findToShift[9];
+            shiftOff[0].SetActive(false);
+            shiftOff[1].SetActive(false);
+        }
+
+        if (transform.position.x == 5)
+        {
+            shiftOff[0].SetActive(true);
+            shiftOff[1].SetActive(true);
+            shiftOff[0] = findToShift[10];
+            shiftOff[1] = findToShift[11];
+            shiftOff[0].SetActive(false);
+            shiftOff[1].SetActive(false);
+        }
     }
 }
-    

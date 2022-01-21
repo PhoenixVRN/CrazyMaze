@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class PlayerControl : MonoBehaviour
 {
-    private float offSet = 0.3f;
+    private float offSet = 0.2f;
     private float distanc = 0.6f;
     private Rigidbody2D _rigidbodyPlayer;
     private bool key;
@@ -31,6 +31,8 @@ public class PlayerControl : MonoBehaviour
 
       public void MovePlayerRight()
       {
+          Debug.DrawRay((Vector2)transform.position + Vector2.right * offSet, Vector2.right*distanc, Color.red, 3);
+          
           RaycastHit2D hit = Physics2D.Raycast((Vector2)transform.position + Vector2.right * offSet, Vector2.right, distanc);
          
           if (hit.collider != null && hit.collider.gameObject.CompareTag("Wall")) return;
@@ -45,6 +47,8 @@ public class PlayerControl : MonoBehaviour
       
       public void MovePlayerLeft()
       {
+          Debug.DrawRay((Vector2)transform.position + Vector2.left * offSet, Vector2.left*distanc, Color.red, 3);
+          
           RaycastHit2D hit = Physics2D.Raycast((Vector2)transform.position + Vector2.left * offSet, Vector2.left, distanc);
           if (hit.collider != null && hit.collider.gameObject.CompareTag("Wall")) return;
           
@@ -56,6 +60,8 @@ public class PlayerControl : MonoBehaviour
       
       public void MovePlayerUp()
       {
+          Debug.DrawRay((Vector2)transform.position + Vector2.up * offSet, Vector2.up*distanc, Color.red, 3);
+          
           RaycastHit2D hit = Physics2D.Raycast((Vector2)transform.position + Vector2.up * offSet, Vector2.up, distanc);
           if (hit.collider != null && hit.collider.gameObject.CompareTag("Wall")) return;
           
@@ -68,6 +74,8 @@ public class PlayerControl : MonoBehaviour
       
       public void MovePlayerDown()
       {
+          Debug.DrawRay((Vector2)transform.position + Vector2.down * offSet, Vector2.down*distanc, Color.red, 3);
+          
           RaycastHit2D hit = Physics2D.Raycast((Vector2)transform.position + Vector2.down * offSet, Vector2.down, distanc);
           if (hit.collider != null && hit.collider.gameObject.CompareTag("Wall")) return;
           
