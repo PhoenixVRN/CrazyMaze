@@ -18,7 +18,7 @@ public class TileBias : MonoBehaviour
     public List<GameObject> shiftOff;
     public int score = 0;
     public Text ScoText;
-
+    public AudioSource audioMoveWall;
 
 //    private bool vertical;
     private String _directMove;
@@ -87,72 +87,122 @@ public class TileBias : MonoBehaviour
         var y = tileForMove.transform.position.y;
         if (_directMove == "Right")
         {
+            StartCoroutine(PlayerMoveRight(y));
             WorkingAnArray(7, y, 1, false);
-
-            Vector2 positionP = Player.position;
-            {
-                if (positionP.y == y)
-                {
-                    if (positionP.x < 6) positionP.x += 1;
-
-                    else positionP.x = 0;
-
-                    Player.MovePosition(positionP);
-                }
-            }
         }
 
         if (_directMove == "Left")
         {
-         
+            StartCoroutine(PlayerMoveLeft(y));
             WorkingAnArray(0, y, -1, false);
-
-
-            Vector2 positionP = Player.position;
-            {
-                if (positionP.y == y)
-                {
-                    if (positionP.x > 0) positionP.x -= 1;
-                    else positionP.x = 6;
-                    Player.MovePosition(positionP);
-                }
-            }
         }
 
         if (_directMove == "Up")
         {
-        
+            StartCoroutine(PlayerMoveUp(x));
             WorkingAnArray(7, x, 1, true);
-
-            Vector2 positionP = Player.position;
-            {
-                if (positionP.x == x)
-                {
-                    if (positionP.y < 6) positionP.y += 1;
-                    else positionP.y = 0;
-                    Player.MovePosition(positionP);
-                }
-            }
         }
 
         if (_directMove == "Down")
         {
-         
+            StartCoroutine(PlayerMoveDown(x));
             WorkingAnArray(0, x, -1, true);
-
-
-            Vector2 positionP = Player.position;
-            {
-                if (positionP.x == x)
-                {
-                    if (positionP.y > 0) positionP.y -= 1;
-                    else positionP.y = 6;
-                    Player.MovePosition(positionP);
-                }
-            }
         }
     }
 
+    private IEnumerator PlayerMoveRight(float y)
+    {
+        Vector2 positionP = Player.position;
+        {
+            if (positionP.y == y)
+            {
+                for (int i = 0; i < 10; i++)
+                {
+                    if (positionP.x < 6.5f)
+                    {
+                        positionP.x += 0.1f;
+                    }
+                    else positionP.x = -0.4f;
+                    
+                    Player.MovePosition(positionP);
+                    yield return new WaitForSeconds(0.1f);
+                }
+                positionP.x = Mathf.Round(positionP.x);
+                Player.MovePosition(positionP);
+            }
+        }
+    }
+    
+    private IEnumerator PlayerMoveLeft(float y)
+    {
+        Vector2 positionP = Player.position;
+        {
+            if (positionP.y == y)
+            {
+                for (int i = 0; i < 10; i++)
+                {
+                    if (positionP.x > -0.5f)
+                    {
+                        positionP.x -= 0.1f;
+                    }
+                    else positionP.x = 6.4f;
+                    
+                    Player.MovePosition(positionP);
+                    yield return new WaitForSeconds(0.1f);
+                }
+                positionP.x = Mathf.Round(positionP.x);
+                Player.MovePosition(positionP);
+            }
+        }
+    }
+    
+    private IEnumerator PlayerMoveUp(float x)
+    {
+        Vector2 positionP = Player.position;
+        {
+            if (positionP.x == x)
+            {
+                for (int i = 0; i < 10; i++)
+                {
+                    if (positionP.y < 6.5f)
+                    {
+                        positionP.y += 0.1f;
+                    }
+                    else positionP.y = -0.4f;
+                    
+                    Player.MovePosition(positionP);
+                    yield return new WaitForSeconds(0.1f);
+                }
+                positionP.y = Mathf.Round(positionP.y);
+                Player.MovePosition(positionP);
+            }
+        }
+    }
+    
+    private IEnumerator PlayerMoveDown(float x)
+    {
+        Vector2 positionP = Player.position;
+        {
+            if (positionP.x == x)
+            {
+                for (int i = 0; i < 10; i++)
+                {
+                    if (positionP.y > -0.5f)
+                    {
+                        positionP.y -= 0.1f;
+                    }
+                    else positionP.y = 6.4f;
+                    
+                    Player.MovePosition(positionP);
+                    yield return new WaitForSeconds(0.1f);
+                }
+                positionP.y = Mathf.Round(positionP.y);
+                Player.MovePosition(positionP);
+            }
+        }
+    }
+    
+    
     private void WorkingAnArray(int a, float b, int c, bool vertical)
     {
         if (vertical)
@@ -191,8 +241,9 @@ public class TileBias : MonoBehaviour
                 }
             }
         }
-
-        StartCoroutine(SmoothShift(c, vertical,a));
+        audioMoveWall.Play();
+        
+        StartCoroutine(SmoothShift(c, vertical, a));
 
         HideFind();
        
@@ -217,12 +268,21 @@ public class TileBias : MonoBehaviour
                     s.position = position;
                 }
             }
-
+            
             yield return new WaitForSeconds(0.1f);
+        }
+        
+        foreach (var s in _listMove)
+        {
+            Vector2 position = s.position;
+            position.y = Mathf.Round(position.y);
+            position.x = Mathf.Round(position.x);
+            s.position = position;
         }
         
         _tf.transform.SetParent(_tMap.transform); // убираем из родителя
         tileForMove = _listMove[a].gameObject;
+        Debug.Log(a);
         tileForMove.transform.position = Vector3.zero;
         tileForMove.transform.SetParent(this.gameObject.transform, false);
         transform.position = StartTile;
