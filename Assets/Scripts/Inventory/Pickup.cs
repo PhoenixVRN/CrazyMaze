@@ -6,16 +6,14 @@ using UnityEngine;
 public class Pickup : MonoBehaviour
 {
     private Inventory _Inventory;
-    public GameObject slotButton;
-    public GameObject exit;
-    public GameObject exitView;
+    public GameObject nextView;
     public GameObject view;
+    public GameObject nextGameItem;
 
     private void Start()
     {
      var ddd = GameObject.FindGameObjectsWithTag("Player");
      _Inventory = ddd[0].GetComponent<Inventory>();
-     Instantiate(slotButton, _Inventory.slots[0].transform);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -27,14 +25,14 @@ public class Pickup : MonoBehaviour
 //                if (_Inventory.isFull[i] == false)
 //                {
 //                    _Inventory.isFull[i] = true;
-
-                    exit.SetActive(true);
+                    nextGameItem.SetActive(true); //активируем итем из списка.
+//                    exit.SetActive(true);
                     foreach (Transform child in view.transform)
                     {
                         GameObject.Destroy((child.gameObject));
                     }
                    
-                    Instantiate(exitView, _Inventory.slots[0].transform);
+                    Instantiate(nextView, _Inventory.slots[0].transform);
                     Destroy(gameObject);
 //                    break;
 //                }
