@@ -9,21 +9,22 @@ using UnityEngine.UI;
 public class TileBias : MonoBehaviour
 {
     public List<GameObject> findToShift;
-    private GameObject _tMap;
     public MIxingMap _map;
     public GameObject tileForMove;
     public Rigidbody2D Player;
-    private GameObject _tf;
-    private Vector2 StartTile;
     public List<GameObject> shiftOff;
     public int score = 0;
     public Text ScoText;
     public AudioSource audioMoveWall;
-
-//    private bool vertical;
-    private String _directMove;
-    private String koortinat;
     public List<Transform> _listMove;
+    public bool stop = false;
+    
+    private GameObject _tf;
+    private Vector2 StartTile;
+    private GameObject _tMap;
+    private String _directMove;
+    private String _koorвinat;
+    
 
     private void Start()
     {
@@ -42,6 +43,9 @@ public class TileBias : MonoBehaviour
 
     public void MoveTile()
     {
+        if (stop) return;
+        stop = true;
+        StartCoroutine(StartTimer());
         DirectionMove();
         if (_directMove == "Error")
         {
@@ -110,6 +114,12 @@ public class TileBias : MonoBehaviour
         }
     }
 
+    private IEnumerator StartTimer()
+    {
+        yield return new WaitForSeconds(1.2f);
+        stop = false;
+    }
+    
     private IEnumerator PlayerMoveRight(float y)
     {
         Vector2 positionP = Player.position;
@@ -290,6 +300,7 @@ public class TileBias : MonoBehaviour
         _tf = tileForMove;
         score++;
         ScoText.text = "Ходы: " + score.ToString();
+       
     }
 
    

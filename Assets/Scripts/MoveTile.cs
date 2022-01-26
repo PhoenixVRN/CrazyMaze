@@ -7,7 +7,8 @@ public class MoveTile : MonoBehaviour
     private Renderer rend;
     private static Vector2 _koordinat;
     public GameObject moveTile;
-    
+    public TileBias s;
+
 
     void Start()
     {
@@ -24,8 +25,11 @@ public class MoveTile : MonoBehaviour
     // ...the red fades out to cyan as the mouse is held over...
      void OnMouseOver()
      {
+        
          if (Input.GetMouseButtonDown(0))
          {
+             Debug.Log(s.stop);
+             if (s.stop) return; // проверка на анимацию.
              _koordinat = transform.position;
              moveTile.transform.position = _koordinat;
          }
