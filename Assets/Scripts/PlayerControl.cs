@@ -1,21 +1,18 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
-using UnityEngine.UI;
+
 
 public class PlayerControl : MonoBehaviour
 {
-    private float offSet = 0.2f;
-    private float distanc = 0.6f;
+    private float _offSet = 0.2f;
+    private float _distanc = 0.6f;
     private Rigidbody2D _rigidbodyPlayer;
-    private bool key;
+    private bool _key;
     
-//    public Sprite imageSpr;
+
   
       void Start()
       {
-          
           _rigidbodyPlayer = GetComponent<Rigidbody2D>();
       }
   
@@ -31,9 +28,9 @@ public class PlayerControl : MonoBehaviour
 
       public void MovePlayerRight()
       {
-          Debug.DrawRay((Vector2)transform.position + Vector2.right * offSet, Vector2.right*distanc, Color.red, 3);
+      //    Debug.DrawRay((Vector2)transform.position + Vector2.right * _offSet, Vector2.right*_distanc, Color.red, 3);
           
-          RaycastHit2D hit = Physics2D.Raycast((Vector2)transform.position + Vector2.right * offSet, Vector2.right, distanc);
+          RaycastHit2D hit = Physics2D.Raycast((Vector2)transform.position + Vector2.right * _offSet, Vector2.right, _distanc);
          
           if (hit.collider != null && hit.collider.gameObject.CompareTag("Wall")) return;
           
@@ -47,9 +44,9 @@ public class PlayerControl : MonoBehaviour
       
       public void MovePlayerLeft()
       {
-          Debug.DrawRay((Vector2)transform.position + Vector2.left * offSet, Vector2.left*distanc, Color.red, 3);
+          Debug.DrawRay((Vector2)transform.position + Vector2.left * _offSet, Vector2.left*_distanc, Color.red, 3);
           
-          RaycastHit2D hit = Physics2D.Raycast((Vector2)transform.position + Vector2.left * offSet, Vector2.left, distanc);
+          RaycastHit2D hit = Physics2D.Raycast((Vector2)transform.position + Vector2.left * _offSet, Vector2.left, _distanc);
           if (hit.collider != null && hit.collider.gameObject.CompareTag("Wall")) return;
           
           Vector2 position = _rigidbodyPlayer.position;
@@ -60,9 +57,9 @@ public class PlayerControl : MonoBehaviour
       
       public void MovePlayerUp()
       {
-          Debug.DrawRay((Vector2)transform.position + Vector2.up * offSet, Vector2.up*distanc, Color.red, 3);
+          Debug.DrawRay((Vector2)transform.position + Vector2.up * _offSet, Vector2.up*_distanc, Color.red, 3);
           
-          RaycastHit2D hit = Physics2D.Raycast((Vector2)transform.position + Vector2.up * offSet, Vector2.up, distanc);
+          RaycastHit2D hit = Physics2D.Raycast((Vector2)transform.position + Vector2.up * _offSet, Vector2.up, _distanc);
           if (hit.collider != null && hit.collider.gameObject.CompareTag("Wall")) return;
           
           Vector2 position = _rigidbodyPlayer.position;
@@ -74,9 +71,9 @@ public class PlayerControl : MonoBehaviour
       
       public void MovePlayerDown()
       {
-          Debug.DrawRay((Vector2)transform.position + Vector2.down * offSet, Vector2.down*distanc, Color.red, 3);
+          Debug.DrawRay((Vector2)transform.position + Vector2.down * _offSet, Vector2.down*_distanc, Color.red, 3);
           
-          RaycastHit2D hit = Physics2D.Raycast((Vector2)transform.position + Vector2.down * offSet, Vector2.down, distanc);
+          RaycastHit2D hit = Physics2D.Raycast((Vector2)transform.position + Vector2.down * _offSet, Vector2.down, _distanc);
           if (hit.collider != null && hit.collider.gameObject.CompareTag("Wall")) return;
           
           Vector2 position = _rigidbodyPlayer.position;

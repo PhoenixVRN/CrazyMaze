@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,30 +8,30 @@ using UnityEngine.UI;
 public class TileBias : MonoBehaviour
 {
     public List<GameObject> findToShift;
-    public MIxingMap _map;
+    public MIxingMap map;
     public GameObject tileForMove;
-    public Rigidbody2D Player;
+    public Rigidbody2D player;
     public List<GameObject> shiftOff;
     public int score = 0;
-    public Text ScoText;
+    public Text scoreText;
     public AudioSource audioMoveWall;
-    public List<Transform> _listMove;
+    public List<Transform> listMove;
     public bool stop = false;
     
     private GameObject _tf;
-    private Vector2 StartTile;
+    private Vector2 _startTile;
     private GameObject _tMap;
     private String _directMove;
-    private String _koorвinat;
+    private String _coordinates;
     
 
     private void Start()
     {
-        StartTile = transform.position;
+        _startTile = transform.position;
         _tMap = GameObject.Find("Tile_Map");
-        _map = _tMap.GetComponent<MIxingMap>();
+        map = _tMap.GetComponent<MIxingMap>();
         _tf = tileForMove;
-        _map.waypoints.Add(_tf.transform);
+        map.waypoints.Add(_tf.transform);
     }
 
     private void Update()
@@ -49,7 +48,7 @@ public class TileBias : MonoBehaviour
         DirectionMove();
         if (_directMove == "Error")
         {
-            transform.position = StartTile;
+            transform.position = _startTile;
             return;
         }
 
@@ -122,7 +121,7 @@ public class TileBias : MonoBehaviour
     
     private IEnumerator PlayerMoveRight(float y)
     {
-        Vector2 positionP = Player.position;
+        Vector2 positionP = player.position;
         {
             if (positionP.y == y)
             {
@@ -134,18 +133,18 @@ public class TileBias : MonoBehaviour
                     }
                     else positionP.x = -0.4f;
                     
-                    Player.MovePosition(positionP);
+                    player.MovePosition(positionP);
                     yield return new WaitForSeconds(0.1f);
                 }
                 positionP.x = Mathf.Round(positionP.x);
-                Player.MovePosition(positionP);
+                player.MovePosition(positionP);
             }
         }
     }
     
     private IEnumerator PlayerMoveLeft(float y)
     {
-        Vector2 positionP = Player.position;
+        Vector2 positionP = player.position;
         {
             if (positionP.y == y)
             {
@@ -157,18 +156,18 @@ public class TileBias : MonoBehaviour
                     }
                     else positionP.x = 6.4f;
                     
-                    Player.MovePosition(positionP);
+                    player.MovePosition(positionP);
                     yield return new WaitForSeconds(0.1f);
                 }
                 positionP.x = Mathf.Round(positionP.x);
-                Player.MovePosition(positionP);
+                player.MovePosition(positionP);
             }
         }
     }
     
     private IEnumerator PlayerMoveUp(float x)
     {
-        Vector2 positionP = Player.position;
+        Vector2 positionP = player.position;
         {
             if (positionP.x == x)
             {
@@ -180,18 +179,18 @@ public class TileBias : MonoBehaviour
                     }
                     else positionP.y = -0.4f;
                     
-                    Player.MovePosition(positionP);
+                    player.MovePosition(positionP);
                     yield return new WaitForSeconds(0.1f);
                 }
                 positionP.y = Mathf.Round(positionP.y);
-                Player.MovePosition(positionP);
+                player.MovePosition(positionP);
             }
         }
     }
     
     private IEnumerator PlayerMoveDown(float x)
     {
-        Vector2 positionP = Player.position;
+        Vector2 positionP = player.position;
         {
             if (positionP.x == x)
             {
@@ -203,11 +202,11 @@ public class TileBias : MonoBehaviour
                     }
                     else positionP.y = 6.4f;
                     
-                    Player.MovePosition(positionP);
+                    player.MovePosition(positionP);
                     yield return new WaitForSeconds(0.1f);
                 }
                 positionP.y = Mathf.Round(positionP.y);
-                Player.MovePosition(positionP);
+                player.MovePosition(positionP);
             }
         }
     }
@@ -217,36 +216,36 @@ public class TileBias : MonoBehaviour
     {
         if (vertical)
         {
-            foreach (var i in _map.waypoints)
+            foreach (var i in map.waypoints)
             {
-                if (i.position.x == b) _listMove.Add(i);
+                if (i.position.x == b) listMove.Add(i);
             }
 
-            for (int i = 0; i < _listMove.Count; i++)
+            for (int i = 0; i < listMove.Count; i++)
             {
-                for (int j = 0; j < _listMove.Count - 1; j++)
+                for (int j = 0; j < listMove.Count - 1; j++)
                 {
-                    if (_listMove[j].position.y > _listMove[j + 1].position.y)
+                    if (listMove[j].position.y > listMove[j + 1].position.y)
                     {
-                        (_listMove[j], _listMove[j + 1]) = (_listMove[j + 1], _listMove[j]);
+                        (listMove[j], listMove[j + 1]) = (listMove[j + 1], listMove[j]);
                     }
                 }
             }
         }
         else
         {
-            foreach (var i in _map.waypoints)
+            foreach (var i in map.waypoints)
             {
-                if (i.position.y == b) _listMove.Add(i);
+                if (i.position.y == b) listMove.Add(i);
             }
 
-            for (int i = 0; i < _listMove.Count; i++)
+            for (int i = 0; i < listMove.Count; i++)
             {
-                for (int j = 0; j < _listMove.Count - 1; j++)
+                for (int j = 0; j < listMove.Count - 1; j++)
                 {
-                    if (_listMove[j].position.x > _listMove[j + 1].position.x)
+                    if (listMove[j].position.x > listMove[j + 1].position.x)
                     {
-                        (_listMove[j], _listMove[j + 1]) = (_listMove[j + 1], _listMove[j]);
+                        (listMove[j], listMove[j + 1]) = (listMove[j + 1], listMove[j]);
                     }
                 }
             }
@@ -263,7 +262,7 @@ public class TileBias : MonoBehaviour
     {
         for (float d = 0; d < 10; d++)
         {
-            foreach (var s in _listMove)
+            foreach (var s in listMove)
             {
                 if (vertical)
                 {
@@ -282,7 +281,7 @@ public class TileBias : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
         
-        foreach (var s in _listMove)
+        foreach (var s in listMove)
         {
             Vector2 position = s.position;
             position.y = Mathf.Round(position.y);
@@ -291,15 +290,15 @@ public class TileBias : MonoBehaviour
         }
         
         _tf.transform.SetParent(_tMap.transform); // убираем из родителя
-        tileForMove = _listMove[a].gameObject;
+        tileForMove = listMove[a].gameObject;
         Debug.Log(a);
         tileForMove.transform.position = Vector3.zero;
         tileForMove.transform.SetParent(this.gameObject.transform, false);
-        transform.position = StartTile;
-        _listMove.Clear();
+        transform.position = _startTile;
+        listMove.Clear();
         _tf = tileForMove;
         score++;
-        ScoText.text = "Ходы: " + score.ToString();
+        scoreText.text = "Ходы: " + score.ToString();
        
     }
 
@@ -307,64 +306,26 @@ public class TileBias : MonoBehaviour
 
     private void HideFind()
     {
-        if (transform.position.y == 1)
-        {
-            shiftOff[0].SetActive(true);
-            shiftOff[1].SetActive(true);
-            shiftOff[0] = findToShift[0];
-            shiftOff[1] = findToShift[1];
-            shiftOff[0].SetActive(false);
-            shiftOff[1].SetActive(false);
-        }
+        if (transform.position.y == 1) Hide(1);
 
-        if (transform.position.y == 3)
-        {
-            shiftOff[0].SetActive(true);
-            shiftOff[1].SetActive(true);
-            shiftOff[0] = findToShift[2];
-            shiftOff[1] = findToShift[3];
-            shiftOff[0].SetActive(false);
-            shiftOff[1].SetActive(false);
-        }
+        if (transform.position.y == 3) Hide(3);
 
-        if (transform.position.y == 5)
-        {
-            shiftOff[0].SetActive(true);
-            shiftOff[1].SetActive(true);
-            shiftOff[0] = findToShift[4];
-            shiftOff[1] = findToShift[5];
-            shiftOff[0].SetActive(false);
-            shiftOff[1].SetActive(false);
-        }
+        if (transform.position.y == 5) Hide(5);
 
-        if (transform.position.x == 1)
-        {
-            shiftOff[0].SetActive(true);
-            shiftOff[1].SetActive(true);
-            shiftOff[0] = findToShift[6];
-            shiftOff[1] = findToShift[7];
-            shiftOff[0].SetActive(false);
-            shiftOff[1].SetActive(false);
-        }
+        if (transform.position.x == 1) Hide(7);
 
-        if (transform.position.x == 3)
-        {
-            shiftOff[0].SetActive(true);
-            shiftOff[1].SetActive(true);
-            shiftOff[0] = findToShift[8];
-            shiftOff[1] = findToShift[9];
-            shiftOff[0].SetActive(false);
-            shiftOff[1].SetActive(false);
-        }
+        if (transform.position.x == 3) Hide(9);
 
-        if (transform.position.x == 5)
-        {
-            shiftOff[0].SetActive(true);
-            shiftOff[1].SetActive(true);
-            shiftOff[0] = findToShift[10];
-            shiftOff[1] = findToShift[11];
-            shiftOff[0].SetActive(false);
-            shiftOff[1].SetActive(false);
-        }
+        if (transform.position.x == 5) Hide(11);
+    }
+
+    private void Hide(int i)
+    {
+        shiftOff[0].SetActive(true);
+        shiftOff[1].SetActive(true);
+        shiftOff[0] = findToShift[i-1];
+        shiftOff[1] = findToShift[i];
+        shiftOff[0].SetActive(false);
+        shiftOff[1].SetActive(false);
     }
 }

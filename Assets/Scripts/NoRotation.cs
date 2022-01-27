@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class NoRotation : MonoBehaviour
@@ -9,9 +8,6 @@ public class NoRotation : MonoBehaviour
         if (transform.rotation.z != 0)
         {
             transform.rotation =  Quaternion.Euler(0, 0, 0);
-            
-             // Debug.Log("Local pPos: " + transform.localRotation);
-             // Debug.Log("Local pPos: " + transform.rotation);
         }
     }
 }
