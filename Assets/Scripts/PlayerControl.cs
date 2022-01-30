@@ -8,9 +8,8 @@ public class PlayerControl : MonoBehaviour
     private float _distanc = 0.6f;
     private Rigidbody2D _rigidbodyPlayer;
     private bool _key;
+    [SerializeField] private GameObject _pauseMenu;
     
-
-  
       void Start()
       {
           _rigidbodyPlayer = GetComponent<Rigidbody2D>();
@@ -22,6 +21,10 @@ public class PlayerControl : MonoBehaviour
           if (Input.GetKeyDown("a")) MovePlayerLeft();
           if (Input.GetKeyDown("w")) MovePlayerUp();
           if (Input.GetKeyDown("s")) MovePlayerDown();
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            PauseMenu();
+        }
       }
 
     
@@ -81,4 +84,9 @@ public class PlayerControl : MonoBehaviour
           _rigidbodyPlayer.MovePosition(position);
           
       }
+
+    private void PauseMenu()
+    {
+        _pauseMenu.SetActive(true);
+    }
 }

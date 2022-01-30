@@ -416,6 +416,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -424,9 +426,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -447,9 +449,12 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
@@ -3207,6 +3212,137 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      candle-2: 21300064
+      window-1: 21300202
+      box-2_12: 21300060
+      key-4-type-7: 21300182
+      window-16: 21300228
+      window-20: 21300236
+      window-31: 21300254
+      window-23: 21300242
+      bottle-red: 21300010
+      box-1_13: 21300034
+      key-3-type-7: 21300166
+      key-2-type--5: 21300144
+      window6: 21300258
+      key-4-type-4: 21300176
+      key-3-type--12: 21300158
+      key-4-type-3: 21300174
+      door-4_18: 21300096
+      candle-3: 21300066
+      key-4-type-5: 21300178
+      key-1-type-15: 21300134
+      window-26: 21300248
+      box-2_1: 21300040
+      key-4-type-1: 21300170
+      box-1_1: 21300012
+      key-4-type-6: 21300180
+      window-21: 21300238
+      box-2_2: 21300042
+      stake-2-on: 21300196
+      box-1_11: 21300030
+      key-2-type--2: 21300138
+      box-2_5: 21300046
+      key-3-type--11: 21300156
+      window-24: 21300244
+      key-1-type-13: 21300130
+      key-1-type-12: 21300128
+      key-1-type-11: 21300126
+      window-5: 21300210
+      window-10: 21300218
+      box-1_15: 21300038
+      column-12: 21300086
+      column-13: 21300088
+      box-2_6: 21300048
+      root-2: 21300192
+      window-22: 21300240
+      window-12: 21300222
+      box-1_2: 21300014
+      box-1_3: 21300016
+      stake-3-on: 21300198
+      columns-8: 21300090
+      door-4_25: 21300100
+      column-11: 21300084
+      key-1-type-10: 21300124
+      ring-3: 21300190
+      key-4-type-8: 21300184
+      bottle-empty: 21300006
+      window-7: 21300212
+      root-5: 21300194
+      column-6: 21300080
+      window-4: 21300208
+      door-4_27: 21300104
+      key-4-type-10: 21300188
+      window-17: 21300230
+      key-4-type-2: 21300172
+      column-1: 21300074
+      window-19: 21300234
+      bottle-blue: 21300002
+      key-1-type-14: 21300132
+      window-15: 21300226
+      key-4-type-9: 21300186
+      coin-2: 21300070
+      box-2_7: 21300050
+      door-4_17: 21300094
+      key-1-type-1: 21300108
+      column-3: 21300076
+      key-3-type--3: 21300150
+      window-2: 21300204
+      key-1-type-4: 21300114
+      box-1_5: 21300018
+      column-4: 21300078
+      box-1_6: 21300020
+      door-4_26: 21300102
+      key-2-type-1: 21300148
+      coin-3: 21300072
+      key-1-type-2: 21300110
+      key-3-type-1: 21300160
+      box-1_8: 21300024
+      key-3-type-6: 21300164
+      box-1_7: 21300022
+      box-1_10: 21300028
+      window-8: 21300214
+      box-2_4: 21300044
+      key-2-type--4: 21300142
+      candelabrum-2: 21300062
+      key-2-type--6: 21300146
+      torch-1: 21300200
+      window-30: 21300252
+      key-3-type-2: 21300162
+      key-1-type5: 21300136
+      box-2_9: 21300054
+      window-25: 21300246
+      window13: 21300260
+      box-1_14: 21300036
+      window-9: 21300216
+      box-2_8: 21300052
+      box-2_11: 21300058
+      bottle-green: 21300008
+      box-1_9: 21300026
+      key-1-type-6: 21300116
+      key-1-type-9: 21300122
+      key-1-type-8: 21300120
+      window-3: 21300206
+      window-32: 21300256
+      window-14: 21300224
+      key-1-type-7: 21300118
+      box-1_12: 21300032
+      key-3-type--9: 21300154
+      key-2-type--3: 21300140
+      window-11: 21300220
+      bottle-dark-blue: 21300004
+      window-18: 21300232
+      key-3-type--5: 21300152
+      door-4_28: 21300106
+      columns-9: 21300092
+      box-2_10: 21300056
+      column-7: 21300082
+      key-3-type-10: 21300168
+      door-4_20: 21300098
+      coin-1: 21300068
+      key-1-type-3: 21300112
+      window-28: 21300250
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

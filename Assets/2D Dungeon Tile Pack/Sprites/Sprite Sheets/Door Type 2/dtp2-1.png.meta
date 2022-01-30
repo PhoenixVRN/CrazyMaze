@@ -395,6 +395,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -403,9 +405,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -426,9 +428,12 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
@@ -3039,6 +3044,130 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      o_door-4_28: 21300246
+      door-4_ladder-2: 21300164
+      o_door-3_5-: 21300222
+      door-4_14: 21300140
+      door-3_8: 21300130
+      o_door-1_5: 21300194
+      door-1_6: 21300014
+      door-2_11: 21300104
+      door-1_36: 21300046
+      door-1_64: 21300078
+      door-1_2: 21300006
+      o_door-2_14: 21300214
+      door-2_14: 21300106
+      door-1_21: 21300032
+      o_door-4_21: 21300232
+      door-1_14: 21300024
+      door-1_54: 21300066
+      door-1_20: 21300030
+      door-1_39: 21300052
+      o_door-3_6: 21300224
+      door-3_2: 21300120
+      door-1_61: 21300072
+      o_door-4_5: 21300228
+      door-1_ladder-3: 21300084
+      door-1_13: 21300022
+      door-1_ladder-2: 21300082
+      door-4_13: 21300138
+      o_door-1_3: 21300190
+      o_door-2_-9: 21300198
+      o_door-4_25: 21300240
+      door-3_ladder-3: 21300134
+      door-1_ladder-7: 21300088
+      o_door-2_6: 21300206
+      door-1_-12: 21300002
+      o_door-1_-20: 21300172
+      o_door-1_-22: 21300176
+      door-1_22: 21300034
+      door-1_30: 21300042
+      door-1_60: 21300070
+      door-1_37: 21300048
+      door-4_25: 21300154
+      door-2_3: 21300092
+      door-1_55: 21300068
+      door-1_45: 21300056
+      o_door-1_4: 21300192
+      door-1_52: 21300062
+      door-1_15: 21300026
+      door-1_9: 21300018
+      door-1_62: 21300074
+      door-4_16: 21300144
+      door-3_3: 21300122
+      o_door-2_3-: 21300202
+      o_door-2_8: 21300210
+      o_door-1_-38: 21300182
+      o_door-2_16: 21300216
+      door-2_ladder-4: 21300116
+      door-3_ladder-1: 21300132
+      door-4_27: 21300158
+      door-4_22: 21300148
+      door-3_5: 21300126
+      o_door-3_1: 21300218
+      o_door-2_11: 21300212
+      o_door-1_-6: 21300170
+      door-1_31: 21300044
+      door-4_ladder-5: 21300168
+      o_door-4_26: 21300242
+      door-2_ladder-1: 21300110
+      door-1_1: 21300004
+      door-4_15: 21300142
+      door-1_16: 21300028
+      door-1_38: 21300050
+      door-4_23: 21300150
+      door-3_6: 21300128
+      door-4_21: 21300146
+      door-1_29: 21300040
+      door-4_5: 21300136
+      door-4_24: 21300152
+      o_door-1_7: 21300196
+      o_door-2_1: 21300200
+      door-4_26: 21300156
+      door-1_46: 21300058
+      o_door-4_23: 21300236
+      o_door-4_13: 21300230
+      door-1_7: 21300016
+      door-1_44: 21300054
+      door-1_53: 21300064
+      o_door-1_-21: 21300174
+      o_door-2_7: 21300208
+      o_door-3_8: 21300226
+      door-1_10: 21300020
+      door-1_63: 21300076
+      o_door-1_-36: 21300180
+      door-1_ladder-5: 21300086
+      door-2_5: 21300094
+      door-2_16: 21300108
+      door-1_ladder-1: 21300080
+      o_door-4_22: 21300234
+      o_door-1_-23: 21300178
+      door-2_ladder-3: 21300114
+      door-2_8: 21300100
+      door-3_1: 21300118
+      o_door-4_24: 21300238
+      door-4_ladder-1: 21300162
+      door-2_ladder-2: 21300112
+      door-3_4: 21300124
+      o_door-4_27: 21300244
+      door-2_7: 21300098
+      door-1_5: 21300012
+      door-1_23: 21300036
+      o_door-1_-53: 21300184
+      door-1_28: 21300038
+      door-4_ladder-4: 21300166
+      door-2_1: 21300090
+      door-1_3: 21300008
+      o_door-3_2: 21300220
+      door-1_47: 21300060
+      o_door-2_5: 21300204
+      door-4_28: 21300160
+      door-1_4: 21300010
+      door-2_6: 21300096
+      o_door-1_1: 21300186
+      o_door-1_2: 21300188
+      door-2_9: 21300102
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
