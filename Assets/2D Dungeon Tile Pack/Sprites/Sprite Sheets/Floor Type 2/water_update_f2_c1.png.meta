@@ -134,6 +134,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -142,9 +144,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -165,9 +167,12 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
@@ -972,6 +977,44 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      floor_water -13: 3874956073948141853
+      floor_water -7: -4306399583122704153
+      floor_water -6: -1953817167423323131
+      floor_hole-12: 683203987467421592
+      floor_hole-6: -2044937460429461003
+      floor_hole-13: 8795956576464515432
+      floor_hole-15: 8219058291983937318
+      floor_water -1: -6148176915632337577
+      floor_hole-4: 3993399879134766931
+      floor_base-1: -45729239444133199
+      floor_hole-18: 1691995732859629495
+      floor_water -12: 1012753292487276604
+      floor_water -10: 3636894688165985285
+      floor_hole-7: -5719588842141924879
+      floor_hole-19: -1818031017867088929
+      floor_base-2: 9022473743200007973
+      floor_hole-5: -1472692209614395816
+      floor_water -2: 359567300677103454
+      floor_hole-11: -4624195478584600623
+      floor_hole-2: -7313619742545075046
+      floor_hole-10: 3208838536418422355
+      floor_water -15: 1217984429301764189
+      floor_water -3: -7143364248384168801
+      floor_water -9: 6742416495342433514
+      floor_hole-9: 7538873629782328262
+      floor_base-3: -2032661727084459717
+      floor_water -5: 835585051089753267
+      floor_hole-14: 4593134005540665041
+      floor_water -4: -2249672349787710539
+      floor_water -8: 1312011237537748327
+      floor_water -11: 1664909600218774912
+      floor_hole-17: 6460885660117691736
+      floor_hole-1: 6409580888882471905
+      floor_water -14: 2103352872635990069
+      floor_hole-16: -3802197233986307987
+      floor_hole-8: -3579296926641972298
+      floor_hole-3: 6970930143476072215
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

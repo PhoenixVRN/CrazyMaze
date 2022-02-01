@@ -179,6 +179,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -187,9 +189,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -210,9 +212,12 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
@@ -1332,6 +1337,59 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      c2_floor_hole-12: 2518067095897192679
+      c2_floor_water-13: 6421860862902445202
+      c2_floor_water-11: 5151967367173692773
+      c2_floor_hole-1: 408712916990250595
+      c2_floor_water-14: -1921978805959766644
+      c2_floor_hole-5: -2750746045407266495
+      c2_floor_water-15: -7984739219918963595
+      c2_floor_hole-11: 4797408396564566547
+      c2_floor_water-5: 7263818981861353877
+      c2_floor_hole-14: 6932480992395233532
+      c2_floor_water-6: 2258388308992161496
+      c2_floor_water-8: -8631102867144213560
+      c2_floor_hole-7: -3847498882535337514
+      c2_floor_water2-6: 2003506440407164254
+      c2_floor_water2-14: 6248690966012855350
+      c2_floor_water2-3: 3188539508633609543
+      c2_floor_water-4: -1065715862140008077
+      c2_floor_water2-13: 184602262082490096
+      c2_floor_water2-15: -1983216887827607075
+      c2_floor_base-3: -5590588722794577505
+      c2_floor_water2-2: 3039333798549160251
+      c2_floor_water2-9: -3203759623637967040
+      c2_floor_water2-1: -6848606346323385734
+      c2_floor_water2-8: 3360711870096254373
+      c2_floor_water-7: -7847584871569061507
+      c2_floor_water2-12: 173870291439440890
+      c2_floor_hole-13: -4268295857145873030
+      c2_floor_hole-3: 4475228205567125457
+      c2_floor_water-12: -6876446810173117583
+      c2_floor_water2-10: 2644670094827356340
+      c2_floor_hole-9: -7151731360362713274
+      c2_floor_hole-18: 6066049701908413547
+      c2_floor_water-10: -2736001285671231789
+      c2_floor_hole-16: -7098201122561625375
+      c2_floor_hole-15: -2412669049570731189
+      c2_floor_water-3: 5939740899101177182
+      c2_floor_hole-6: 5950144203585448576
+      c2_floor_hole-4: 9102457145970186520
+      c2_floor_water2-7: 2883598565130814050
+      c2_floor_hole-8: -547652911772810889
+      c2_floor_base-2: 8924569202433902142
+      c2_floor_hole-2: 3319765615215734410
+      c2_floor_water2-4: -5166314761181145816
+      c2_floor_water2-5: 4424213226487182483
+      c2_floor_water-2: -7868721565995362123
+      c2_floor_base-1: -5213697398411972103
+      c2_floor_water-1: 7523197362640603924
+      c2_floor_water2-11: 8948874751776457158
+      c2_floor_hole-10: 3209040740450714444
+      c2_floor_hole-17: -6138566340044416231
+      c2_floor_hole-19: -6922349656296291050
+      c2_floor_water-9: -4014272193030369483
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -434,6 +434,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -442,9 +444,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -465,9 +467,12 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
@@ -3351,6 +3356,143 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      stakes-2-off: 21300212
+      stone-bridge-1: 21300236
+      stone-bridge-3: 21300240
+      stakes-2-on: 21300214
+      chest-2-open-5: 21300068
+      spider-2: 21300192
+      chest-3-closed-2: 21300074
+      chest-2-closed-1: 21300050
+      stakes-3-on: 21300218
+      window-27: 21300264
+      chest-1-open-2: 21300044
+      bottle-shadow: 21300018
+      wooden-bridge-3: 21300272
+      spider-5: 21300198
+      stakes-3-off: 21300216
+      statue-8: 21300234
+      bottle-black: 21300016
+      chest-2-closed: 21300058
+      stone-bridge-4: 21300242
+      bone-3: 21300006
+      root-1: 21300180
+      stone-bridge-2: 21300238
+      key-3-type--4: 21300152
+      bone-5: 21300010
+      chest-4-open-6_2: 21300124
+      stakes-1-off: 21300208
+      manhole-1-on2: 21300160
+      chest-3-open-1: 21300080
+      key-3-type--8: 21300154
+      manhole-2-on1: 21300164
+      hole-trap-1-on: 21300146
+      hole-trap-2-off: 21300148
+      chest-4-open-5_1: 21300118
+      chest-1-open-3: 21300046
+      sand: 21300188
+      chest-4-open-5_2: 21300120
+      stakes-1-on: 21300210
+      columns-10: 21300136
+      stone-bridge-5: 21300244
+      chest-4-open-7_2: 21300128
+      chest-2-open-4: 21300066
+      chest-4-open-7_1: 21300126
+      chest-1-closed-1: 21300034
+      chest-3-open-4: 21300086
+      root-4: 21300184
+      stone-bridge-12: 21300258
+      stone-bridge-8: 21300250
+      chest-4-closed-1: 21300088
+      chest-3-open-3: 21300084
+      spider-3: 21300194
+      statue-3: 21300224
+      hest-2-open-1: 21300142
+      chest-4-open-2_2: 21300108
+      hole-trap-1-off: 21300144
+      stone-bridge-11: 21300256
+      chest-2-open-2: 21300062
+      statue-6: 21300230
+      chest-2-open-6: 21300070
+      hearth: 21300140
+      torch-3: 21300262
+      chest-4-closed-4: 21300094
+      root-3: 21300182
+      statue-7: 21300232
+      bone-2: 21300004
+      chest-1-closed-3: 21300038
+      stone-bridge-7: 21300248
+      chest-4-closed-7: 21300100
+      chest-4-open-1_2: 21300104
+      candle-1: 21300030
+      chest-3-closed-1: 21300072
+      stake-2-off: 21300204
+      stone-bridge-9: 21300252
+      torch-2: 21300260
+      candle-4: 21300032
+      box-2_3: 21300022
+      box-1_4: 21300020
+      chest-2-open-3: 21300064
+      door-4_19: 21300138
+      chest-4-closed-6: 21300098
+      wooden-bridge--2: 21300270
+      chest-4-open-6_1: 21300122
+      window-29: 21300266
+      chest-1-open-4: 21300048
+      chest-2-closed-3: 21300054
+      chest-3-closed-3: 21300076
+      chest-4-closed-3: 21300092
+      stone-bridge-10: 21300254
+      chest-4-open-3_1: 21300110
+      manhole-3-on2: 21300172
+      stone-bridge-6: 21300246
+      statue-1: 21300220
+      spider-1: 21300190
+      chest-2-closed-4: 21300056
+      chest-4-open-3_2: 21300112
+      chest-4-open-1_1: 21300102
+      manhole-2-off: 21300162
+      stake-1-on: 21300202
+      manhole-2-on2: 21300166
+      stake-3-off: 21300206
+      statue-5: 21300228
+      bone-1: 21300002
+      candelabrum-4: 21300028
+      chest-4-closed-2: 21300090
+      candelabrum-1: 21300024
+      statue-2: 21300222
+      chest-1-closed-4: 21300040
+      chest-2-closed5: 21300060
+      coin shadow: 21300130
+      chest-2-closed-2: 21300052
+      manhole-1-off: 21300156
+      chest-4-open-2_1: 21300106
+      chest-4-open-4_2: 21300116
+      column-5: 21300134
+      manhole-1-on1: 21300158
+      chest-4-open-4_1: 21300114
+      poison: 21300174
+      ring-1: 21300176
+      column-2: 21300132
+      ring-2: 21300178
+      hole-trap-2-on: 21300150
+      bone-6: 21300012
+      manhole-3-on1: 21300170
+      manhole-3-off: 21300168
+      spider-4: 21300196
+      candelabrum-3: 21300026
+      bone-4: 21300008
+      bone-7: 21300014
+      wooden-bridge--1: 21300268
+      stake-1-off: 21300200
+      chest-4-closed-5: 21300096
+      root-6: 21300186
+      chest-3-open-2: 21300082
+      chest-3-closed-4: 21300078
+      statue-4: 21300226
+      chest-1-open-1: 21300042
+      chest-1-closed-2: 21300036
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -305,6 +305,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -313,9 +315,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -336,9 +338,12 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
@@ -2319,6 +2324,100 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      door-3_8: 21300100
+      door-2_11: 21300084
+      door 3 - ladder-6: 21300020
+      door-1_36: 21300056
+      door-4_32: 21300118
+      door-2_12: 21300086
+      door-1_2: 21300034
+      door-1_48: 21300064
+      door 4 - ladder-2: 21300028
+      door 4 - ladder-5: 21300030
+      door-1_35: 21300054
+      o_door-2_14: 21300162
+      o_door-4_29: 21300180
+      door-2_14: 21300088
+      door-1_50: 21300068
+      door-3_2: 21300094
+      door-1_20: 21300042
+      o_door-3_6: 21300168
+      o_door-4_21: 21300172
+      door-2_10: 21300082
+      o_door-4_31: 21300184
+      o_door-4_32: 21300186
+      door 1 - ladder-5: 21300004
+      door-4_13: 21300104
+      o_door-2_10: 21300156
+      door-1_11: 21300038
+      door 3 - ladder-4: 21300016
+      door-1_17: 21300040
+      door-1_30: 21300044
+      o_door-1_34: 21300128
+      door-4_29: 21300112
+      door-2_3: 21300074
+      door-1_45: 21300058
+      o_door-1_47: 21300138
+      o_door-2_16: 21300164
+      o_door-1_50: 21300144
+      door-1_32: 21300048
+      door-4_22: 21300106
+      door-4_31: 21300116
+      door-2_15: 21300090
+      door-3_5: 21300096
+      door-1_49: 21300066
+      o_door-1_46: 21300136
+      door 3 - ladder-1: 21300012
+      o_door-1_32: 21300124
+      o_door-1_49: 21300142
+      door-1_31: 21300046
+      o_door-2_13: 21300160
+      o_door-1_30: 21300120
+      door-4_23: 21300108
+      door-4_30: 21300114
+      door 2 - ladder-4: 21300008
+      o_door-4_30: 21300182
+      door-3_6: 21300098
+      door 2 - ladder-3: 21300006
+      door-4_5: 21300102
+      door-4_24: 21300110
+      o_door-2_1: 21300148
+      door 4 - ladder-6: 21300032
+      o_door-3_5: 21300166
+      door-1_46: 21300060
+      o_door-4_23: 21300176
+      door 3 - ladder-7: 21300022
+      door-1_51: 21300070
+      o_door-4_13: 21300170
+      o_door-1_33: 21300126
+      o_door-2_7: 21300154
+      door 3 - ladder-2: 21300014
+      door-1_10: 21300036
+      o_door-1_36: 21300132
+      door 4 - ladder-1: 21300026
+      door-1_34: 21300052
+      door-2_16: 21300092
+      door-2_5: 21300078
+      o_door-1_31: 21300122
+      o_door-1_48: 21300140
+      o_door-2_3: 21300150
+      o_door-4_22: 21300174
+      door 2 - ladder-6: 21300010
+      door 1 - ladder-2: 21300002
+      o_door-4_24: 21300178
+      o_door-2_12: 21300158
+      door-2_4: 21300076
+      door 3 - ladder-5: 21300018
+      door-2_7: 21300080
+      door-2_1: 21300072
+      door-1_33: 21300050
+      o_door-1_51: 21300146
+      door-1_47: 21300062
+      o_door-2_5: 21300152
+      o_door-1_45: 21300134
+      door 3 - ladder-8: 21300024
+      o_door-1_35: 21300130
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

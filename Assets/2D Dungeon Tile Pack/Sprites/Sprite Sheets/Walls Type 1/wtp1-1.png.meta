@@ -152,6 +152,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -160,9 +162,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -183,9 +185,12 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
@@ -1095,6 +1100,49 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      wall_bot_middle_6: 21300014
+      wall_bot_middle_4: 21300010
+      wall_bot_middle_3: 21300008
+      wall_left side_middle_3: 21300020
+      wall_top_middle_4: 21300038
+      wall_top_middle_5: 21300040
+      "\u04412_wall_bot_right-corner": 21300054
+      wall_right side_bot-corner: 21300024
+      wall_right side_middle_3: 21300026
+      wall_top_middle_1: 21300032
+      wall_bot_right-corner: 21300016
+      wall_left side_bot-corner: 21300018
+      "\u04412_wall_bot_middle_5": 21300050
+      "\u04412_wall_left side_top-corner": 21300062
+      "\u04412_wall_right side_middle_1": 21300066
+      "\u04412_wall_top_right-corner": 21300084
+      "\u04412_wall_top_middle_5": 21300080
+      "\u04412_wall_top_middle_2": 21300074
+      wall_bot_middle_5: 21300012
+      wall_right side_top-corner: 21300028
+      wall_top_right-corner: 21300044
+      "\u04412_wall_left side_bot-corner": 21300056
+      "\u04412_wall_top_left-corner": 21300070
+      "\u04412_wall_right side_bot-corner": 21300064
+      "\u04412_wall_bot_middle_6": 21300052
+      wall_top_middle_3: 21300036
+      "\u04412_wall_bot_middle_3": 21300048
+      "\u04412_wall_left side_middle_3": 21300060
+      "\u04412_wall_top_middle_1": 21300072
+      "\u04412_wall_bot_left-corner": 21300046
+      wall_top_middle_2: 21300034
+      wall_bot_left-corner: 21300002
+      "\u04412_wall_top_middle_6": 21300082
+      wall_top_middle_6: 21300042
+      wall_top_left-corner: 21300030
+      wall_bot_middle_2: 21300006
+      "\u04412_wall_left side_middle_2": 21300058
+      "\u04412_wall_top_middle_3": 21300076
+      "\u04412_wall_top_middle_4": 21300078
+      wall_left side_top-corner: 21300022
+      "\u04412_wall_right side_top-corner": 21300068
+      wall_bot_middle_1: 21300004
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

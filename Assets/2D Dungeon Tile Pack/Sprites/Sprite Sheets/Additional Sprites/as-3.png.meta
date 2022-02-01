@@ -377,6 +377,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -385,9 +387,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -408,9 +410,12 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
@@ -2916,6 +2921,125 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      platform_1_2_glow: 8890675370954406240
+      floating-bridge: 1517506918984514695
+      glow_1: 1474960429119242941
+      barrel_2_4: -193502266428791141
+      top_part_1: 5587044991477410808
+      gold-mid_no_glow: -1915516461033139947
+      press-platform_3_1: -539122439116391987
+      coffin_1_2: 5520011473845610373
+      big_platform_1_1: -7634332784966237246
+      big_platform_3_2: -6922137188665511114
+      bookshelf_1_1: 7880577188077796873
+      flask_2: 902504711845591212
+      press-platform_3_2: 4736126900087599417
+      coffin_2_5: 4687792236266179656
+      gold-small-2_no_glow: 8723519194489873686
+      big_platform_3_1: -9067420582073040941
+      big_platform_2_2: -6410808765825978044
+      press-platform_2_1: 9049152381775509296
+      coffin_1_5: -3158810074243331345
+      big_platform_3_3: 4265782278677062883
+      press-platform_1_1: -897240042617386125
+      barrel_1_4: -1668664954902295559
+      barrel_1_1: -6039544065885576213
+      table: -1779572522790044833
+      sarcophagus_1_2: -2586100616940848242
+      altar_4: 8353813700213074186
+      barrel_2_2: -5356225963986471999
+      bookshelf_1_1-empty: 4962353992118752345
+      barrel_3_2: 5665254737754032903
+      mortar-and-pestle-: -3100608833431503954
+      top_part_2: -4904663494994792565
+      barrel_2_1: -1224608549725854260
+      sarcophagus_1_1: 2887629287186372946
+      chest_1_3: -4712751295182030527
+      sarcophagus_2_2: 6157150790734403417
+      big_platform_1_3: -913896660877745552
+      coffin_1_7: -8119826730706011724
+      big_platform_4_2: 751261387554708401
+      coffin_1_8: 2995997043978399999
+      bookshelf_2_1_empty: 1304361247179550082
+      coffin_top_1: 5612872631678357217
+      big_platform_4_1: 642533535941191748
+      bookshelf_1_3_empty: -7212590122155634521
+      altar_2: 8568565404687215890
+      big_platform_3_4: -2772835867104728844
+      press_platform_2_2_glow: 5196681860439319590
+      coffin_2_2: 8528304176709324141
+      big_platform_2_4: -1619748196671743535
+      gold-mid: 7792961078035367580
+      coffin_2_6: -1078135068565899605
+      altar_skull: 6107428771986811664
+      big_platform_1_2: -3005296660203083437
+      big_platform_2_1: -8348229116670223874
+      coffin_2_3: -8988113601751301029
+      barrel_3_3: -416470859057117834
+      chest_1_1: -4508683409966529916
+      coffin_1_1: -9200560263912621981
+      book_1: -6053866238764602296
+      tube-stand: 6041970671694257049
+      bookshelf_1_4: -1825581797873546457
+      coffin_1_6: -6729369851170840864
+      gold-big_no_glow: -8635021860710927490
+      gold-mid-2: -1479334955889682276
+      coffin_top_3: -8754032496343366936
+      gold-big-2_no_glow: 4260965124210914605
+      press_platform_4_2_glow: 3483025938488031372
+      flask_1: -229486262648802331
+      press_platform_4_2: 6386494138675418827
+      barrel_3_1: 2612881191012758232
+      gold-small: -8344985820435567562
+      coffin_1_9: -958330292061577186
+      coffin_1_4: 2226840924010320853
+      altar_3: 5665438637076871699
+      barrel_1_2: -2553760371043077252
+      bookshelf_2_1: 3472871858678547129
+      chest_1_2: -2132075069528100726
+      coffin_2_4: 1412038697851375061
+      press_platform_3_1_glow: 3700939199120643699
+      gold-small-2: -5384382668302803689
+      bookshelf_1_2_empty: 2630738180613812675
+      big_platform_4_4: -5426804130855444522
+      bottle: 6587758831544789272
+      altar_1: -7370522178915421255
+      barrel_1_3: -3303907501943016216
+      book_2: 7244088574319584740
+      inkpot: -5633667642438998466
+      platform_1_1_glow: -1218888855514171421
+      gold-small_no_glow: -8809753602129858008
+      press-platform_1_2: 5228811054615286172
+      book_3_2: -8482131817816831951
+      press_platform_3_2_glow: -5634386044605471344
+      press_platform_2_1_glow: -7957895442234026218
+      bookshelf_2_3_empty: -2842326282041618538
+      coffin_2_1: 4308038723155396549
+      bookshelf_2_4: 7736593404773571708
+      big_platform_2_3: 3252731799808528210
+      sarcophagus_2_3: 727523126089880555
+      barrel_2_3: 1856267400154334916
+      big_platform_4_3: -5455092505082036825
+      bookshelf_2_2_empty: -8442607498044526715
+      bookshelf_1_2: 8771614976507375379
+      press-platform_4_1: 1194938103714865027
+      gold-mid-2_no_glow: -7399342519222888756
+      press-platform_2_2: 996557419493606542
+      sarcophagus_2_1: 2346824742331001456
+      sarcophagus_1_3: 1830138332115648236
+      coffin_top_1_2: 8198603577284169744
+      press_platform_4_1_glow: -2333167127300158910
+      big_platform_1_4: 1139255371181182603
+      gold-big-2: 503213579931703313
+      barrel_3_4: -2251502683974622101
+      bookshelf_2_3: 8452028314043668698
+      book_3_1: 8286838533112661558
+      coffin_1_3: 4115173263243752889
+      candle: -3008214370931526878
+      gold-big: 5693417796400497270
+      bookshelf_1_3: -8694435505768594138
+      bookshelf_2_2: 6414735513982655779
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
